@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/solution_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/result_view"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:textAlignment="textEnd"
+        android:textSize="32dp" />
+
+    <TextView
+        android:id="@+id/result_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/buttons_container"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:textSize="64dp" />
+
+    <LinearLayout
+        android:id="@+id/buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingVertical="12dp">
+
+        <!-- Row 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnClear"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="159dp"
+                android:layout_height="72dp"
+                android:layout_margin="10dp"
+                android:text="Clear"
+                android:textSize="28sp"
+                app:cornerRadius="36dp"
+                android:backgroundTint="#3190A8" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDelete"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:textSize="32sp"
+                android:layout_margin="10dp"
+                android:text="⌫"
+                android:backgroundTint="#3190A8"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDivide"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                android:backgroundTint="#985735"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:textSize="34sp"
+                android:layout_margin="10dp"
+                android:text="/"/>
+        </LinearLayout>
+
+        <!-- Row 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn7"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:textSize="34sp"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/number_button"
+                android:text="7"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn8"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:textSize="34sp"
+                android:layout_margin="10dp"
+                android:text="8"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn9"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:textSize="34sp"
+                android:layout_margin="10dp"
+                android:text="9"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMultiply"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                android:backgroundTint="#985735"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:textSize="34sp"
+                android:layout_margin="10dp"
+                android:text="*"/>
+        </LinearLayout>
+
+        <!-- Row 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn4"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:textSize="34sp"
+                android:layout_margin="10dp"
+                android:text="4"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn5"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:textSize="34sp"
+                android:layout_margin="10dp"
+                android:text="5"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn6"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:textSize="34sp"
+                android:layout_margin="10dp"
+                android:text="6"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMinus"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                android:backgroundTint="#985735"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:textSize="34sp"
+                android:layout_margin="10dp"
+                android:text="-"/>
+        </LinearLayout>
+
+        <!-- Row 4 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn1"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:textSize="34sp"
+                android:layout_margin="10dp"
+                android:text="1"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn2"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:textSize="34sp"
+                android:layout_margin="10dp"
+                android:text="2"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn3"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:textSize="34sp"
+                android:layout_margin="10dp"
+                android:text="3"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAdd"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                android:backgroundTint="#985735"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:textSize="34sp"
+                android:layout_margin="10dp"
+                android:text="+"/>
+        </LinearLayout>
+
+        <!-- Row 5 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDecimal"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                app:cornerRadius="36dp"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:textSize="34sp"
+                android:layout_margin="10dp"
+                android:text="."/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn0"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="163dp"
+                android:layout_height="72dp"
+                android:layout_margin="10dp"
+                android:text="0"
+                android:textSize="34sp"
+                app:cornerRadius="36dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEqual"
+                style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="10dp"
+                android:backgroundTint="#985735"
+                android:text="="
+                android:textSize="34sp"
+                app:cornerRadius="36dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

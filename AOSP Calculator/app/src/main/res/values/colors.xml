@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="theme_base">#5AC3EC</color>
+    <color name="number_button">#804B4B</color>
+    <color name="light_primary">#C7C7C7</color>
+    <color name="dark_primary">#272727</color>
+    <color name="light_view_text">#000000</color>
+    <color name="dark_view_text">#FFFFFF</color>
+    <color name="container_dark">#101010</color>
+    <color name="container_light">#EFEFEF</color>
+</resources>
